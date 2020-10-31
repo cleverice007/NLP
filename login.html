@@ -5,7 +5,11 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V48YCECZY"></script>
 <script>
-
+  function storeUserId(){
+  let Id = document.getElementById("user_id").value;
+  localStorage.setItem('Id',Id)
+}
+console.log(localStorage.getItem('Id'));
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -23,10 +27,4 @@
 'https://cleverice007.github.io/NLP/'" >
      </form>
 </body>
-<script>
-function storeUserId(){
-  let Id = document.getElementById("user_id").value;
-  localStorage.setItem('Id',Id)
-}
-console.log(localStorage.getItem('Id'));
-</script>
+
