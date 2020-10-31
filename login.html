@@ -1,24 +1,32 @@
 <<!DOCTYPE html>
 <html lang="en">
 <<head>
-  
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V48YCECZY"></script>
 <script>
-  var user_id = document.getElementById("user_id").value
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-0V48YCECZY', { 'user_id': user_id });
+  gtag('config', 'G-0V48YCECZY', { 'user_id': localStorage.getItem('Id') });
 </script>
-  
+
   <<title>Login</title>
 </head>
 
-<body style="background-color: black">
+<body style="background-color: white">
      <form method="post" action="/login">
-         <input type="text" name="user", id = "user_id">
-         <input type="button" value="Submit" onclick="location.href='https://cleverice007.github.io/NLP/'">
-
+         登入帳號：<input type="text" name="user", id = "user_id">
+         <input type="button" value="Submit" onclick="storeUserId()" >
+         <input type="button" value="跳轉" onclick="location.href =
+'https://cleverice007.github.io/NLP/login.html'" >
      </form>
 </body>
+<script>
+function storeUserId(){
+  let Id = document.getElementById("user_id").value;
+  localStorage.setItem('Id',Id)
+}
+console.log(user_id);
+</script>
