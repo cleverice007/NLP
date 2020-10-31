@@ -6,7 +6,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V48YCECZY"></script>
 <script>
   function storeUserId(){
-  let Id = document.getElementById("user_id").value;
+  let Id = document.getElementById("user").value;
   localStorage.setItem('Id',Id)
 }
 console.log(localStorage.getItem('Id'));
@@ -21,7 +21,7 @@ console.log(localStorage.getItem('Id'));
 
 <body style="background-color: white">
      <form method="post" action="/login">
-         登入帳號：<input type="text" name="user", id = "user_id">
+         登入帳號：<input type="text" name="user", id = "user">
          <input type="button" value="Submit" onclick="storeUserId()" >
          <input type="button" value="跳轉" onclick="location.href =
 'https://cleverice007.github.io/NLP/'" >
